@@ -1,1 +1,128 @@
 /* your code here */
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+}
+
+/* Photo container and styling */
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.photo-main img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-album ul {
+    display: flex;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.photo-album li {
+    margin-right: 10px;
+}
+
+.photo-album li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Product details section */
+.product-details {
+    flex: 1;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #ff6347;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.variants ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.variants li {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.description h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.description ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
