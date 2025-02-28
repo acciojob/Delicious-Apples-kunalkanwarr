@@ -27,6 +27,10 @@
             display: flex;
         }
 
+        .product { /* Added .product class to wrap everything */
+            display: flex;
+        }
+
         .product__photo {
             width: 40%;
             padding: 20px;
@@ -50,13 +54,18 @@
             justify-content: space-around;
         }
 
+        .photo-album li { /* Added li style */
+            padding: 2px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
         .photo-album li img {
             width: 50px;
             height: 50px;
             border-radius: 6px;
             cursor: pointer;
-            border: 1px solid #ddd;
-            padding: 2px;
+            display: block; /* Ensure image fills the li */
         }
 
         .details {
@@ -78,36 +87,23 @@
             margin-bottom: 10px;
         }
 
-        .colors {
+        .variant ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
             display: flex;
         }
 
-        .colors > * {
-            margin: 0px 5px;
+        .variant ul li {
+            margin: 0 5px;
         }
 
-        .color-option {
+        .variant ul li img { /* Style for variant images */
             width: 20px;
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
             border: 1px solid #888;
-        }
-
-        .color-option.green {
-            background-color: green;
-        }
-
-        .color-option.yellow {
-            background-color: yellow;
-        }
-
-         .color-option.orange {
-            background-color: orange;
-        }
-
-        .color-option.red {
-            background-color: red;
         }
 
         .description {
@@ -132,49 +128,50 @@
 <body>
 
 <div class="container">
-    <div class="product__photo">
-        <div class="photo-container">
-            <div class="photo-main">
-                <img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Green Apple">
+    <div class="product"> <!-- Wrapped everything in .product -->
+        <div class="product__photo">
+            <div class="photo-container">
+                <div class="photo-main">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Green Apple">
+                </div>
+                <div class="photo-album">
+                    <ul>
+                        <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 1"></li>
+                        <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 2"></li>
+                        <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 3"></li>
+                        <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 4"></li>
+                    </ul>
+                </div>
             </div>
-            <div class="photo-album">
-                <ul>
-                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 1"></li>
-                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 2"></li>
-                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 3"></li>
-                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Apple 4"></li>
+        </div>
+        <div class="details">
+            <h1>Delicious Apples</h1>
+            <p>CODE: 45999</p>
+            <p class="price">R$ 7.93</p>
+
+            <div class="variant">
+                <p>SELECT A COLOR</p>
+                <ul> <!-- Changed colors to a list of images -->
+                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Green"></li>
+                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Yellow"></li>
+                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Orange"></li>
+                    <li><img src="https://pplx-res.cloudinary.com/image/upload/v1740769458/user_uploads/cHECKerGBPgzCgx/image.jpg" alt="Red"></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="details">
-        <h1>Delicious Apples</h1>
-        <p>CODE: 45999</p>
-        <p class="price">R$ 7.93</p>
 
-         <div class="variant">
-            <p>SELECT A COLOR</p>
-            <div class="colors">
-                <div class="color-option green"></div>
-                <div class="color-option yellow"></div>
-                <div class="color-option orange"></div>
-                <div class="color-option red"></div>
+            <div class="description">
+                <h3>BENEFITS</h3>
+                <ul>
+                    <li>Apples are nutritious</li>
+                    <li>Apples may be good for weight loss</li>
+                    <li>Apples may be good for bone health</li>
+                    <li>They're linked to a lowest risk of diabetes</li>
+                </ul>
             </div>
-        </div>
 
-        <div class="description">
-            <h3>BENEFITS</h3>
-            <ul>
-                <li>Apples are nutritious</li>
-                <li>Apples may be good for weight loss</li>
-                <li>Apples may be good for bone health</li>
-                <li>They're linked to a lowest risk of diabetes</li>
-            </ul>
+            <button class="add-to-cart">ADD TO CART</button>
         </div>
-
-        <button class="add-to-cart">ADD TO CART</button>
-    </div>
+    </div> <!-- Close .product -->
 </div>
-</body>
 
 </html>
